@@ -63,9 +63,9 @@ def doc_to_pdf_init(directory):
     while os.path.isdir(parent_directory):
         parent_directory += 'f'
     os.mkdir(parent_directory)
-    print(file_names)
     for input_file in file_names:
         doc_to_pdf(input_file,parent_directory)
+        print(input_file + '--->' + input_file.split('.')[0] + '.pdf')
 
 if __name__ == '__main__':
     # 指定目录路径
